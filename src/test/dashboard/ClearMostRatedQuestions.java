@@ -23,13 +23,15 @@ public class ClearMostRatedQuestions {
         }
         objEnv.driver.findElement(By.cssSelector(".cardchart-wrapper:nth-child(2) .success-btn")).click();
 
+        objEnv.driver.findElement(By.cssSelector("#root > div.home > div.home-container > div > div:nth-child(2) > div:nth-child(2) > div > button.danger-btn")).click();
+
         Thread.sleep(500);
-        filterMostRatedQus = objEnv.driver.findElement(By.xpath("//*[@id='root']/div[2]/div[2]/div/div[2]/div[2]/ol/li[1]")).isDisplayed();
+        filterMostRatedQus = objEnv.driver.findElement(By.xpath("/html/body/div/div[2]/div[2]/div/div[2]/div[2]/ol/li[1]")).isDisplayed();
 
         if (filterMostRatedQus) {
-            System.out.println("\n\nFiltered Questions..!");
+            System.out.println("\n\nClear the Filtered Questions..!");
         } else {
-            System.out.println("\n\nQuestions Filltered Fail..!");
+            System.out.println("\n\nNot Clear the Filtered Questions..!");
         }
     }
 
