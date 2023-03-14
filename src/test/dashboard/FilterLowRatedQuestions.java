@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 
 import app.common.Env;
 
-public class FilterLoaRatedQuestions {
+public class FilterLowRatedQuestions {
     
     public static Env objEnv = new Env();
 
@@ -16,10 +16,10 @@ public class FilterLoaRatedQuestions {
         Thread.sleep(1000);
         objEnv.driver.findElement(By.xpath("//*[@id='root']/div[2]/div[1]/div[1]/ul/a[1]/li/span")).click();
 
-        objEnv.driver.findElement(By.cssSelector(".cardchart-wrapper:nth-child(3) .w-100")).click();
+        objEnv.driver.findElement(By.cssSelector("#root > div.home > div.home-container > div > div:nth-child(2) > div:nth-child(3) > div > select")).click();
         {
-            WebElement dropdown = objEnv.driver.findElement(By.cssSelector(".cardchart-wrapper:nth-child(3) .w-100"));
-            dropdown.findElement(By.xpath("//option[. = 'Cashier']")).click();
+            WebElement dropdown = objEnv.driver.findElement(By.cssSelector("#root > div.home > div.home-container > div > div:nth-child(2) > div:nth-child(3) > div > select"));
+            dropdown.findElement(By.xpath("/html/body/div/div[2]/div[2]/div/div[2]/div[3]/div/select/option[2]")).click();
         }
         objEnv.driver.findElement(By.cssSelector(".cardchart-wrapper:nth-child(3) .success-btn")).click();
 
