@@ -24,7 +24,7 @@ public class FilterLoaRatedQuestions {
         objEnv.driver.findElement(By.cssSelector(".cardchart-wrapper:nth-child(3) .success-btn")).click();
 
         Thread.sleep(500);
-        filterLowRatedQus = objEnv.driver.findElement(By.xpath("//*[@id='root']/div[2]/div[2]/div/div[2]/div[3]/ol/li[1]/text()")).isDisplayed();
+        filterLowRatedQus = objEnv.driver.findElement(By.xpath("/html/body/div/div[2]/div[2]/div/div[2]/div[2]/ol/li[1]")).isDisplayed();
 
         if (filterLowRatedQus) {
             System.out.println("\n\nFiltered Questions..!");
