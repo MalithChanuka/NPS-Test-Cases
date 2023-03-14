@@ -15,7 +15,8 @@ public class EditManageRole {
         Thread.sleep(1000);
         objEnv.driver.findElement(By.xpath("//*[@id='root']/div[2]/div[1]/div[1]/ul/a[2]/li")).click();
 
-        objEnv.driver.findElement(By.xpath("//*[@id='root']/div[2]/div[2]/div/div/div/div[2]/table/tbody/tr[1]/td[3]/svg[1]")).click();
+        Thread.sleep(500);
+        objEnv.driver.findElement(By.xpath("/html/body/div/div[2]/div[2]/div/div/div/div[2]/table/tbody/tr[1]/td[3]/svg[1]/path[1]")).click();
 
         objEnv.driver.findElement(By.xpath("/html/body/div[3]/div/div/div[2]/form/div/input")).click();
 
