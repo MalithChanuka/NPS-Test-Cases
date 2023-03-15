@@ -1,6 +1,7 @@
 package app.common;
 
 import java.io.File;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -27,6 +28,8 @@ public class Env {
     public void signIn() throws InterruptedException {
 
         driver.get(baseURL);
+        // driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+        // driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         Thread.sleep(2500);
 
