@@ -1,12 +1,12 @@
 package app.common;
 
 import java.io.File;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Env {
      public WebDriver driver;
@@ -14,22 +14,22 @@ public class Env {
 
      public String baseURL = "https://nps.monoroc.com/";
      public String userName = "nps@admin.com";
-     public String password = "1234";
+     public String password = "123";
 
      public void setUpDriver() {
 
         String absolutePath = new File("").getAbsolutePath();
 
         System.setProperty("Webdriver.chrome.driver", absolutePath+"\\Chromedriver.exe");
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+        driver = new ChromeDriver(options);
 
      }
 
     public void signIn() throws InterruptedException {
 
         driver.get(baseURL);
-        // driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-        // driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         Thread.sleep(2500);
 
