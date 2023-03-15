@@ -14,7 +14,7 @@ public class Env {
 
      public String baseURL = "https://nps.monoroc.com/";
      public String userName = "nps@admin.com";
-     public String password = "123";
+     public String password = "1234";
 
      public void setUpDriver() {
 
