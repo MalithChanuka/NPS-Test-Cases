@@ -1,7 +1,6 @@
 package ManageUsers.admin;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 import app.common.Env;
 
@@ -11,7 +10,7 @@ public class DeleteUser {
 
     public static void addNewUserRoleFun() throws InterruptedException {
 
-        boolean createUser = false;
+        boolean deleteUser = false;
 
         Thread.sleep(1000);
         objEnv.driver.findElement(By.cssSelector(".w-100")).click();
@@ -23,9 +22,9 @@ public class DeleteUser {
         objEnv.driver.findElement(By.cssSelector(".swal2-confirm")).click();
 
         Thread.sleep(500);
-        createUser = objEnv.driver.findElement(By.cssSelector("body > div.swal2-container.swal2-center.swal2-backdrop-show > div > div.swal2-actions > button.swal2-confirm.swal2-styled")).isDisplayed();
+        deleteUser = objEnv.driver.findElement(By.cssSelector("body > div.swal2-container.swal2-center.swal2-backdrop-show > div > div.swal2-actions > button.swal2-confirm.swal2-styled")).isDisplayed();
         
-        if (createUser) {
+        if (deleteUser) {
             System.out.println("\n\nDeleted User..!");
         } else {
             System.out.println("\n\nDid Not Deleted User..!");
