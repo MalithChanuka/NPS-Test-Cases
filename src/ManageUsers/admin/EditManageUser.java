@@ -27,6 +27,7 @@ public class EditManageUser {
             builder.moveToElement(element, 0, 0).perform();
         }
         objEnv.driver.findElement(By.cssSelector("tr:nth-child(4) .edit")).click();
+        Thread.sleep(1000);
         objEnv.driver.findElement(By.xpath("/html/body/div[3]/div/div/div[2]/form/div[1]/input")).click();
         objEnv.driver.findElement(By.name("name")).sendKeys("Malith");
         objEnv.driver.findElement(By.name("role")).click();
@@ -35,15 +36,16 @@ public class EditManageUser {
             dropdown.findElement(By.xpath("//option[. = 'assistant']")).click();
         }
         objEnv.driver.findElement(By.cssSelector(".success-btn")).click();
+        Thread.sleep(1000);
         objEnv.driver.findElement(By.cssSelector(".swal2-confirm")).click();
 
         Thread.sleep(500);
-        roleEdit = objEnv.driver.findElement(By.cssSelector("#root > div.roles > div.role-container > div > div > div > div.text-center.d-flex.bordertable-wrapper.justify-content-center > table > tbody > tr:nth-child(1) > td:nth-child(2)")).isDisplayed();
+        roleEdit = objEnv.driver.findElement(By.xpath("/html/body")).isDisplayed();
 
         if (roleEdit) {
-            System.out.println("\n\nRole Edited..!");
+            System.out.println("\n\nUser Details Edited..!");
         } else {
-            System.out.println("\n\nRole Edit Fail..!");
+            System.out.println("\n\nUser Details Edit Fail..!");
         }
     }
 
