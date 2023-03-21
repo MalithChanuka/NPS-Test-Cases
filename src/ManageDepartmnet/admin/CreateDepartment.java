@@ -12,7 +12,7 @@ public class CreateDepartment {
 
     public static void cancelAddRoleFun() throws InterruptedException {
 
-        boolean cancelRoleAded = false;
+        boolean departmentAded = false;
 
         Thread.sleep(1000);
         objEnv.driver.findElement(By.cssSelector("a:nth-child(5) .name")).click();
@@ -29,16 +29,16 @@ public class CreateDepartment {
         }
         objEnv.driver.findElement(By.name("departmentname")).click();
         objEnv.driver.findElement(By.name("departmentname")).click();
-        objEnv.driver.findElement(By.name("departmentname")).sendKeys("Testing 2");
+        objEnv.driver.findElement(By.name("departmentname")).sendKeys("Testing 3");
         objEnv.driver.findElement(By.cssSelector(".success-btn")).click();
 
         Thread.sleep(1000);
         objEnv.driver.findElement(By.cssSelector(".swal2-confirm")).click();
 
         Thread.sleep(500);
-        cancelRoleAded = objEnv.driver.findElement(By.cssSelector("#root > div.department > div.department-container > div > div")).isDisplayed();
+        departmentAded = objEnv.driver.findElement(By.cssSelector("#root > div.department > div.department-container > div > div")).isDisplayed();
 
-        if (cancelRoleAded) {
+        if (departmentAded) {
             System.out.println("\n\nDepartment Aded..!");
         } else {
             System.out.println("\n\nDepartment Aded Fail..!");
