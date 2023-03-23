@@ -66,4 +66,3 @@ public class CreateDepartmentNPS {
         objEnv.driver.quit();
     }
 }
-
