@@ -26,7 +26,7 @@ public class InvalidLogin {
          // Wait for the dashboard page to load
         //  WebElement dashboardPage = objEnv.driver.findElement(By.xpath("//*[@id='root']/div[2]/div[2]/h3"));
         
-        Thread.sleep(500);
+        Thread.sleep(1500);
         loged = objEnv.driver.findElement(By.cssSelector("#root > div.Toastify > div")).isDisplayed();
 
          // Verify that the dashboard page is displayed
